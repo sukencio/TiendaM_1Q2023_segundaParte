@@ -14,11 +14,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-/**
- *
- * @author VDK
- */
-@Controller
 public class ArticuloController {
 
     @Autowired
@@ -32,7 +27,7 @@ public class ArticuloController {
         var articulos = articuloService.getArticulos(false);
         model.addAttribute("articulos", articulos);
 
-        return "/articulo/listado";
+        return "/articulo/listado"; 
     }
 
     @GetMapping("/articulo/nuevo")
@@ -46,7 +41,7 @@ public class ArticuloController {
     public String guardarArticulo(Articulo articulo) {
         articuloService.save(articulo);
         return "redirect:/articulo/listado";
-    }
+    } 
 
     @GetMapping("/articulo/modificar/{idArticulo}")
     public String modificarArticulo(Articulo articulo, Model model) {
@@ -61,6 +56,6 @@ public class ArticuloController {
     public String eliminarArticulo(Articulo articulo) {
         articuloService.delete(articulo);
         return "redirect:/articulo/listado";
-    }
+    } 
 
 }

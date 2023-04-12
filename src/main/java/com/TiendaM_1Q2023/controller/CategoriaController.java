@@ -1,5 +1,5 @@
 package com.TiendaM_1Q2023.controller;
-
+ 
 import com.TiendaM_1Q2023.domain.Categoria;
 import com.TiendaM_1Q2023.service.CategoriaService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,7 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMapping; 
 
 @Controller
 public class CategoriaController {
@@ -27,7 +27,7 @@ public class CategoriaController {
     public String nuevoCategoria(Categoria categoria) {
         return "/categoria/modificar";
     }
-
+ 
     @PostMapping("/categoria/guardar")
     public String guardarCategoria(Categoria categoria) {
         categoriaService.save(categoria);
