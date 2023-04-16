@@ -35,4 +35,6 @@ public class Usuario implements Serializable
     @OneToMany
     private List<Rol> roles;
     
+    private Long idCliente;
+    
 }
