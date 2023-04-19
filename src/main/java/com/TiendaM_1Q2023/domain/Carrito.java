@@ -6,10 +6,10 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import java.io.Serializable;
-import lombok.Data;
+import lombok.Data; 
 
 
-@Data
+@Data 
 @Entity
 @Table(name = "carrito")
 public class Carrito implements Serializable

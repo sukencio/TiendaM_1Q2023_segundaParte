@@ -78,6 +78,7 @@ public class SecurityConfig {
                 .hasAnyRole("ADMIN", "VENDEDOR")
                 .requestMatchers(
                         "/carrito/agregar/**",
+                        "/carrito/eliminar/**",
                         "/carrito/listado")
                 .hasRole("USER")
                 )
